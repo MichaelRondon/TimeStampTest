@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.puj.aes.modeladoyvalidacion.timestamptest.entity;
+package edu.puj.aes.modyval.timestamptest.entity;
 
 /**
  *
