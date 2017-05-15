@@ -5,28 +5,40 @@
  */
 package edu.puj.aes.modyval.timestamptest.rest;
 
-import edu.puj.aes.modyval.timestamptest.entity.RespuestaDTO;
+import edu.puj.aes.modyval.timestamptest.jaxb.Timestamp;
 import java.util.Date;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author sala-bd
  */
-@RestController
-@RequestMapping(name = "/api/serviceb")
+@Controller
+@RequestMapping("/api")
 public class TimestampController {
 
-    @RequestMapping(name = "/timestamp", method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/timestamp",
+             method = RequestMethod.GET
+             ,produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}
+    )
     public @ResponseBody
-    RespuestaDTO getTimestamp() {
-        RespuestaDTO respuestaDTO = new RespuestaDTO();
-        respuestaDTO.setFecha((new Date()).getTime());
-        return respuestaDTO;
+    Timestamp getTimestamp() {
+        Timestamp timestamp = new Timestamp();
+        timestamp.setFecha((new Date()).getTime());
+        return timestamp;
+    }
+    
+    @RequestMapping(value = "/timestamp",
+             method = RequestMethod.GET
+             ,produces = {MediaType.TEXT_HTML_VALUE, MediaType.TEXT_PLAIN_VALUE}
+    )
+    public @ResponseBody
+    String getTimestampText() {
+        Timestamp timestamp = this.getTimestamp();
+        return String.valueOf(timestamp.getFecha());
     }
 }

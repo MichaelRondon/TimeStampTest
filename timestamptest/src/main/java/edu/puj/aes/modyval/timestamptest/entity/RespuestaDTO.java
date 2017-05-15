@@ -9,6 +9,7 @@ package edu.puj.aes.modyval.timestamptest.entity;
  *
  * @author sala-bd
  */
+@Deprecated
 public class RespuestaDTO {
     private long fecha;
 
