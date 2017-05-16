@@ -30,4 +30,5 @@ Prueba:
   - Utilizar una herramienta para consumir servicios REST con los siguientes parámetros:
     -- Método GET
     -- Header con cualquiera de los siguientes valores: {"Accept":"application/json"} ó {"Accept":"application/xml"} ó {"Accept":"text/plain"} ó {"Accept":"text/html"}
+    
     -- Endpoint http://DOCKER_HOST:4000/api/timestamp
