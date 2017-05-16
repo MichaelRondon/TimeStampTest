@@ -28,7 +28,7 @@ Prueba:
   <code>docker run -p 4000:8080 timestamp-client</code>
   - Mediante un navegador WEB ingresar a la ruta: http://DOCKER_HOST:4000/swagger-ui.html
   - Utilizar una herramienta para consumir servicios REST con los siguientes parámetros:
-    -- Método GET    
-    -- Endpoint http://DOCKER_HOST:4000/api/timestamp
-    -- Header con cualquiera de los siguientes valores: {"Accept":"application/json"} ó {"Accept":"application/xml"} ó {"Accept":"text/plain"} ó {"Accept":"text/html"}
+  	-- Método GET
+	-- Endpoint http://DOCKER_HOST:4000/api/timestamp
+	-- Header con cualquiera de los siguientes valores: {"Accept":"application/json"} ó {"Accept":"application/xml"} ó {"Accept":"text/plain"} ó {"Accept":"text/html"}
     
